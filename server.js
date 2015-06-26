@@ -8,9 +8,15 @@ wss.on('connection', function connection(ws) {
     ws.send('received: ' + url);
 
     if (uriBeacon) {
-      uriBeacon.advertise(url);
-      console.log('advertising: ' + url);
-      ws.send('advertising: ' + url);
+      try {
+        uriBeacon.advertise(url);
+        console.log('advertising: ' + url);
+        ws.send('advertising: ' + url);
+      }
+      catch(e) {
+        console.log('error: ' + e);
+        ws.send('error: ' + e);
+      }
     }
   });
 });
