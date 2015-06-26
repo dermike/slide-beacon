@@ -1,0 +1,30 @@
+{
+  "name": "slide-beacon",
+  "version": "0.1.0",
+  "description": "Share URL's in presentational slides from a Physical Web beacon, making the current Reveal.js slide link only a tap away for the audience.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dermike/slide-beacon.git"
+  },
+  "keywords": [
+    "slide",
+    "presentation",
+    "beacon"
+  ],
+  "author": "Mikael Jergefelt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dermike/slide-beacon/issues"
+  },
+  "homepage": "https://github.com/dermike/slide-beacon",
+  "dependencies": {
+    "ws": "^0.7.2"
+  },
+  "optionalDependencies": {
+    "uri-beacon": "^0.2.3"
+  }
+}
