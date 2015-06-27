@@ -36,6 +36,8 @@ Every section with a data-url attribute will be sent to the beacon server using 
 <section data-url="https://your.url">
 ```
 
+Note that a Physical Web beacon only can broadcast [URL's up to 18 characters](https://github.com/google/uribeacon#short-urls). Use URL shorteners when needed.
+
 ### TODO
 * Auto-detect URL's in Reveal.js slides instead of using data-url attribute
 * Make stand alone web client to control the beacon
