@@ -4,9 +4,11 @@ Minimum viable prototype for sharing URL's in presentational slides with a [Phys
 ![](https://raw.githubusercontent.com/dermike/dermike.github.io/master/images/project_slidebeacon.jpg)
 
 ### Prerequisites
-Since creating PW beacons is currently only supported on Linux, you need to either run both presentation and beacon-server on a Linux machine, or use an external Raspberry Pi with Bluetooth dongle for the server, using NodeJS and websockets.
+Physical Web/Eddystone beacons is currently only supported on Mac OSX (Yosemite) and Linux, sou you need to either run both presentation and beacon-server on a Mac/Linux machine, or use an external Raspberry Pi with Bluetooth dongle for the server, using NodeJS and websockets.
 
 ### Install
+Linux needs these dependencies for Bluetooth:
+
 ```sh
 sudo apt-get install bluetooth bluez-utils libbluetooth-dev
 ```
@@ -21,6 +23,8 @@ Start listening for websocket connection from your presentation with:
 sudo node server.js
 ```
 
+Note: sudo only needed on Linux
+
 ### Reveal.js plugin
 Add as dependency:
 
@@ -30,7 +34,7 @@ dependencies: [
 ]
 ```
 
-Every section with a data-url attribute will be sent to the beacon server using websockets and broadcast. IP or hostname to the server needs to be provided when presentation is loaded. localhost if presenting from a Linux machine, or the ip to the Raspberry Pi/other external device.
+Every section with a data-url attribute will be sent to the beacon server using websockets and broadcast. IP or hostname to the server needs to be provided when presentation is loaded. localhost if presenting from a Mac/Linux machine, or the ip to the Raspberry Pi/other external device.
 
 ```html
 <section data-url="https://your.url">
@@ -41,6 +45,4 @@ Note that a Physical Web beacon only can broadcast [URL's up to 18 characters](h
 ### TODO
 * Auto-detect URL's in Reveal.js slides instead of using data-url attribute
 * Make stand alone web client to control the beacon
-* Try serial connection to Raspberry Pi again, not needing network access
-* Make it work with OSX, not needing a Raspberry Pi or external Linux device
 * Make it work with other presentational software
