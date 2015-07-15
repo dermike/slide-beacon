@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/dermike/slide-beacon",
   "dependencies": {
-    "eddystone-url": "^0.1.0",
+    "eddystone-url": "^0.1.2",
     "uri-beacon-uri-encoding": "^1.1.5",
     "ws": "^0.7.2",
     "bleno": "~0.1.13"
