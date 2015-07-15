@@ -4,7 +4,7 @@ Minimum viable prototype for sharing URL's in presentational slides with a [Phys
 ![](https://raw.githubusercontent.com/dermike/dermike.github.io/master/images/project_slidebeacon.jpg)
 
 ### Prerequisites
-Physical Web/Eddystone beacons is currently only supported on Mac OSX (Yosemite) and Linux, sou you need to either run both presentation and beacon-server on a Mac/Linux machine, or use an external Raspberry Pi with Bluetooth dongle for the server, using NodeJS and websockets.
+Physical Web/Eddystone beacons is currently only supported on Mac OSX (Yosemite) and Linux, so you need to either run both presentation and beacon-server on a Mac/Linux machine, or use an external Raspberry Pi with Bluetooth dongle for the server, using NodeJS and websockets.
 
 ### Install
 Linux needs these dependencies for Bluetooth:
