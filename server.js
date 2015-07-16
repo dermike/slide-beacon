@@ -1,6 +1,6 @@
 var WebSocketServer = require('ws').Server,
     wss = new WebSocketServer({ port: 1234 }),
-    eddystone = require('eddystone-url');
+    EddystoneBeacon = require('eddystone-beacon');
 
 wss.on('connection', function connection(ws) {
   ws.on('message', function incoming(url) {
@@ -8,13 +8,15 @@ wss.on('connection', function connection(ws) {
     ws.send('received: ' + url);
 
     try {
-      eddystone.advertise(url);
+      EddystoneBeacon.advertiseUrl(url);
       console.log('advertising: ' + url);
       ws.send('advertising: ' + url);
+      console.log();
     }
     catch(e) {
       console.log('error: ' + e);
       ws.send('error: ' + e);
+      console.log();
     }
   });
 });
