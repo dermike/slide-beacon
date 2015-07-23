@@ -4,7 +4,9 @@ Minimum viable prototype for sharing URL's in presentational slides with a [Phys
 ![](https://raw.githubusercontent.com/dermike/dermike.github.io/master/images/project_slidebeacon.jpg)
 
 ### Prerequisites
-Physical Web/Eddystone beacons is currently only supported on Mac OSX (Yosemite) and Linux, so you need to either run both presentation and beacon-server on a Mac/Linux machine, or use an external Raspberry Pi with Bluetooth dongle for the server, using NodeJS and websockets.
+This prototype consists of two parts:
+* `server.js`, a Node.js app currently only working on Mac OSX (Yosemite) and Linux, listening for incoming URLs to broadcast over websockets. Needs to run in your terminal or on an external Raspberry Pi while presenting to be able to create the actual Eddystone URL beacon. Can also be used together with this [link sharing Eddystone bookmarklet](https://github.com/dermike/eddystone-beacon).
+* `revealjs-plugin/slide-beacon.js`, plugin for [Reveal.js](https://github.com/hakimel/reveal.js/) HTML presentational framework, that sends marked up URLs in your slides over websockets to the server part for broadcast.
 
 ### Install
 Linux needs these dependencies for Bluetooth:
