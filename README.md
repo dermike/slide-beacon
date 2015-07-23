@@ -5,8 +5,8 @@ Minimum viable prototype for sharing URL's in presentational slides with a [Phys
 
 ### Prerequisites
 This prototype consists of two parts:
-* `server.js`, a Node.js app currently only working on Mac OSX (Yosemite) and Linux, listening for incoming URLs over websockets to broadcast. Needs to run in your terminal or on an external Raspberry Pi while presenting to be able to create the actual Eddystone URL beacon. Can also be used together with this [link sharing Eddystone bookmarklet](https://github.com/dermike/eddystone-bookmarklet).
-* `revealjs-plugin/slide-beacon.js`, plugin for [Reveal.js](https://github.com/hakimel/reveal.js/) HTML presentational framework, that sends marked up URLs in your slides over websockets to the server part for broadcast, making them instantly available for the audience via [Physical Web](http://physical-web.org).
+* `server.js`, a Node.js app currently only working on Mac OSX (Yosemite) and Linux, listening for incoming URLs over websockets to broadcast using Bluetooth, making them instantly available for the audience via [Physical Web](http://physical-web.org). Needs to run in your terminal or on an external Raspberry Pi while presenting to be able to create the actual Eddystone URL beacon. Can also be used together with this [link sharing Eddystone bookmarklet](https://github.com/dermike/eddystone-bookmarklet).
+* `revealjs-plugin/slide-beacon.js`, plugin for [Reveal.js](https://github.com/hakimel/reveal.js/) HTML presentational framework, that sends marked up URLs in your slides over websockets to the server part for broadcast.
 
 ### Install
 Linux needs these dependencies for Bluetooth:
