@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/dermike/slide-beacon",
   "dependencies": {
-    "eddystone-beacon": "^1.0.1",
-    "ws": "^0.7.2"
+    "eddystone-beacon": "1.0.2",
+    "ws": "0.7.2"
   }
 }
