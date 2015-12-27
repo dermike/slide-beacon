@@ -4,7 +4,7 @@ let WebSocketServer = require('ws').Server,
   EddystoneBeacon = require('eddystone-beacon');
 
 wss.on('connection', ws => {
-  ws.on('message', (url) => {
+  ws.on('message', url => {
     console.log('received: ' + url);
     ws.send('received: ' + url);
 
