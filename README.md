@@ -17,6 +17,10 @@ Linux needs these dependencies for Bluetooth:
 sudo apt-get install bluetooth bluez-utils libbluetooth-dev
 ```
 
+On a Mac you need [Xcode](https://developer.apple.com/xcode/download/) and its `Command Line Tools` to build the Bluetooth dependencies. You can find this under the menu `Xcode -> Preferences -> Downloads`
+
+Install dependencies:
+
 ```sh
 npm install
 ```
