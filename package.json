@@ -23,6 +23,6 @@
   "homepage": "https://github.com/dermike/slide-beacon",
   "dependencies": {
     "eddystone-beacon": "1.0.6",
-    "ws": "2.0.0"
+    "ws": "2.0.1"
   }
 }
